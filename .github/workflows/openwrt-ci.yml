@@ -12,8 +12,6 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-#  schedule:
-#    - cron: 0 20 * * *
   release:
     types: [published]
 
@@ -23,7 +21,6 @@ jobs:
 
     name: Build OpenWrt firmware
 
-#    runs-on: ubuntu-latest
     runs-on : ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
 
@@ -153,33 +150,11 @@ jobs:
           CONFIG_PACKAGE_libyaml=y
           CONFIG_PACKAGE_luci-app-aliddns=y
           CONFIG_PACKAGE_luci-app-aria2=y
-          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_ShadowsocksR_Libev_Client is not set
-          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_ShadowsocksR_Libev_Server is not set
-          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Shadowsocks_Libev_Client is not set
-          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Shadowsocks_Libev_Server is not set
-          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Simple_obfs is not set
-          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Socks5_Proxy is not set
-          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Socks_Server is not set
-          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Trojan is not set
-          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Trojan-Go is not set
-          # CONFIG_PACKAGE_luci-app-bypass_INCLUDE_Xray is not set
           CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
           CONFIG_PACKAGE_luci-app-minidlna=y
           CONFIG_PACKAGE_luci-app-nfs=y
           CONFIG_PACKAGE_luci-app-openclash=y
           CONFIG_PACKAGE_luci-app-passwall=y
-          # CONFIG_PACKAGE_luci-app-ssr-plus is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_Obfs is not set
-          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray is not set
-          # CONFIG_PACKAGE_luci-app-vsftpd is not set
-          # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_ShadowsocksR_Libev_Server is not set
-          # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Trojan is not set
-          # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray is not set
-          # CONFIG_PACKAGE_luci-app-vssr_INCLUDE_Xray_plugin is not set
           CONFIG_PACKAGE_luci-compat=y
           CONFIG_PACKAGE_luci-i18n-aliddns-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
@@ -211,8 +186,6 @@ jobs:
           CONFIG_PACKAGE_ruby-stringio=y
           CONFIG_PACKAGE_ruby-strscan=y
           CONFIG_PACKAGE_ruby-yaml=y
-          # CONFIG_PACKAGE_shadowsocksr-libev-ssr-check is not set
-          # CONFIG_PACKAGE_shadowsocksr-libev-ssr-server is not set
           CONFIG_PACKAGE_strongswan=y
           CONFIG_PACKAGE_strongswan-charon=y
           CONFIG_PACKAGE_strongswan-ipsec=y
@@ -237,7 +210,6 @@ jobs:
           CONFIG_PACKAGE_unzip=y
           CONFIG_PACKAGE_v2ray-core=y
           CONFIG_PACKAGE_v2ray-plugin=y
-          # CONFIG_PACKAGE_vsftpd-alt is not set
           CONFIG_RPCBIND_LIBWRAP=y
           CONFIG_RPCBIND_RMTCALLS=y
           CONFIG_SQLITE3_DYNAMIC_EXTENSIONS=y
